@@ -7,10 +7,11 @@
          @foreach ($images as $image)
             <div class="well">
                 <div class="row">
-                <img style="width:100%" src="/picpoolagain/public/storage/cover_images/{{$image->cover_image}}">
+                <img style="width:100%" src="storage/cover_images/{{$image->cover_image}}">
                 </div>
             </div>
             {!!Form::open(['action' => ['Imagescontroller@destroy', $image->id], 'method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
+               @csrf   
                {{Form::hidden('_method', 'DELETE')}}   
                {{Form::submit('Delete')}}
             {!!Form::close()!!}
