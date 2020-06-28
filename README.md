@@ -1,1 +1,4 @@
-http://picturepoolagain.herokuapp.com/
+https://picturepool.herokuapp.com
+
+/home
+/upload
